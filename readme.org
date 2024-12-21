@@ -6,11 +6,11 @@ constexpr size_t get_malloc() {
     return mallinfo2().uordblks();
 }
 要改成：
+#+BEGIN_SRC cpp
 size_t get_malloc() {
     return mallinfo().uordblks;
 }
-
-···
+#+END_SRC
 
 * DySECT
 
