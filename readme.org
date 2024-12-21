@@ -1,12 +1,12 @@
 * 需要修改的地方：
 ** 1. 代码里的utils文件夹需要单独下载
 ** 2. source/time_test.cpp中的函数在我的环境下需要进行修改(为了不改动我的ubuntu环境配置)：
-···
+
+#+BEGIN_SRC cpp
 constexpr size_t get_malloc() {
     return mallinfo2().uordblks();
 }
 要改成：
-#+BEGIN_SRC cpp
 size_t get_malloc() {
     return mallinfo().uordblks;
 }
